@@ -4,6 +4,8 @@
 *.swp
 *.sqlite3
 
+migrations/
+
 dist/
 build/
 *.log
