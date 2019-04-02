@@ -56,6 +56,7 @@ class Post(models.Model):
 
     title = models.CharField(max_length=255, verbose_name="标题")
     desc = models.CharField(max_length=1024, blank=True, verbose_name="摘要")
+    url = models.CharField(max_length=255, blank=False, verbose_name="URL", default="404")
     content = models.TextField(verbose_name="正文", help_text="正文必须为MarkDown格式")
     status = models.PositiveIntegerField(default=STATUS_NORMAL, choices=STATUS_ITEMS, verbose_name="状态")
     category = models.ForeignKey(Category, verbose_name="分类")
