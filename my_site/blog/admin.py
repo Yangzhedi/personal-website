@@ -28,7 +28,7 @@ class TagAdmin(admin.ModelAdmin):
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
     list_display = [
-        'title', 'category', 'status',
+        'id', 'title', 'category', 'status',
         'create_time', 'operator'
     ]
     list_display_links = []
@@ -48,6 +48,7 @@ class PostAdmin(admin.ModelAdmin):
         'status',
         'content',
         'tag',
+        # 'create_time'
     )
 
     def operator(self, obj):
